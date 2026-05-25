@@ -1,0 +1,165 @@
+/* Basic cleanup for the page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #c5e4e7; /* Light blue background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* The primary white wrapper box */
+.calculator-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column; /* Stacks items vertically on small phone screens */
+  gap: 25px;
+}
+
+/* Left Input panel alignment */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  color: #5e7e7e;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input[type="number"] {
+  background-color: #f3f9fa;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: right;
+  color: #00474b;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #26c2ae; /* Highlight box color when typing */
+}
+
+/* Red error text styling */
+.error-message {
+  color: #e17052;
+  font-size: 13px;
+  font-weight: bold;
+  display: none; /* Hidden by default until JS reveals it */
+}
+
+/* Layout row layout for the 4 tip selectors */
+.tip-box-layout {
+  display: flex;
+  flex-wrap: wrap; /* Wraps items cleanly to the next line if crowded */
+  gap: 10px;
+}
+
+.tip-btn {
+  background-color: #00474b; /* Dark green default */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  min-width: 70px;
+}
+
+.tip-btn:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+/* Active clicked button color rule */
+.tip-btn.active {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+#custom-tip {
+  flex: 1;
+  min-width: 90px;
+  font-size: 18px;
+}
+
+/* Right dark summary box panel */
+.output-section {
+  background-color: #00474b;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  flex: 1;
+}
+
+.output-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-title {
+  color: white;
+  font-weight: bold;
+}
+
+.output-subtitle {
+  color: #7f9d9f;
+  font-size: 12px;
+}
+
+.output-value {
+  color: #26c2ae;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Reset key */
+#reset-btn {
+  background-color: #26c2ae;
+  color: #00474b;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+#reset-btn:hover {
+  background-color: #9fe8df;
+}
+
+/* Big computer view adjustments */
+@media (min-width: 768px) {
+  .calculator-container {
+    flex-direction: row; /* Shifts side-by-side on wide viewports */
+  }
+}
