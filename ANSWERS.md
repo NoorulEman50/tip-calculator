@@ -3,7 +3,7 @@
 ### 1. How to Run
 [cite_start]To run this project on a fresh machine, open the folder in Visual Studio Code, right-click `index.html`, and select **Open with Live Server**[cite: 8, 9]. [cite_start]No additional installations or framework dependencies are strictly required to compile the application[cite: 3, 9]. 
 
-* **Live Deployment URL:** [Paste your Vercel or Netlify link here after you deploy in the next step!]
+* **Live Deployment URL:** [(https://app.netlify.com/projects/effortless-malasada-f2d8a7/deploys/6a148b54d4281a8247aa185f)]
 
 ---
 
